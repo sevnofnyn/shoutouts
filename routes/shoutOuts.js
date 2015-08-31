@@ -18,15 +18,15 @@ router.get('/:id?', function(req, res, next){
             next(err);
         } else {
             var obj = JSON.parse(data);
-            var shoutOut = obj;
+            var shoutOuts = obj;
 
             obj.forEach(function(item, index){
                 if(index == arrayIndex){
-                    shoutOut = item;
+                    shoutOuts = item;
                 }
             });
 
-            res.json(shoutOut);
+            res.json(shoutOuts);
         }
     })
 });
